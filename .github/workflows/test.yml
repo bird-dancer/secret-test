@@ -25,9 +25,7 @@ jobs:
           pip install .
       - name: Run metrics and post comment
         run: |
-          python tests/gha_metrics.py > metrics.md
-          gh pr comment $PRNUM --body-file metrics.md
+          gh pr comment "what up"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-          PRNUM: ${{ github.event.pull_request.number }}
