@@ -1,2 +1,2 @@
 echo "hello from asdf"
-echo ${{ secrets.MY_SECRET }}
+echo "this shouldnt work"
