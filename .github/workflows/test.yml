@@ -24,7 +24,7 @@ jobs:
              echo "echo"
       - name: Run metrics and post comment
         run: |
-          gh pr comment $PRNUM "what up"
+          gh pr comment $PRNUM -b "what up"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
