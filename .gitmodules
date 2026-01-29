@@ -1,0 +1,3 @@
+[submodule "scame"]
+	path = scame
+	url = git@github.com:bird-dancer/scame.git
