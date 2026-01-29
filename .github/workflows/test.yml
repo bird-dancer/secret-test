@@ -24,7 +24,11 @@ jobs:
              echo "echo"
       - name: Run metrics and post comment
         run: |
-          gh pr comment $PRNUM -b "what up"
+          curl -s -X POST \
+               -H "Authorization: token $GITHUB_TOKEN" \
+               -H "Accept: application/vnd.github+json" \
+               "https://api.github.com/repos/$GH_REPO/issues/$PRNUM/comments" \
+               -d "{\"body\":\"what up\"}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
