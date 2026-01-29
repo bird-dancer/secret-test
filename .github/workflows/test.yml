@@ -33,3 +33,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           PRNUM: ${{ github.event.pull_request.number }}
+      - name: testing
+        run: |
+             tests/asdf.sh
